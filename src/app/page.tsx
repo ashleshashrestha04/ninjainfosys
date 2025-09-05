@@ -1,10 +1,46 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const [theme, setTheme] = useState("g10");
+
+  useEffect(() => {
+    // On mount, check localStorage for theme
+    const savedTheme = typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+    if (savedTheme === "g90" || savedTheme === "g10") {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", "g10");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "g10" ? "g90" : "g10";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <button
+          style={{
+            marginBottom: "1rem",
+            padding: "0.5rem 1rem",
+            borderRadius: "6px",
+            border: "1px solid #ccc",
+            background: "var(--background)",
+            color: "var(--foreground)",
+            cursor: "pointer"
+          }}
+          onClick={toggleTheme}
+        >
+          Toggle Theme ({theme === "g10" ? "Light" : "Dark"})
+        </button>
         <Image
           className={styles.logo}
           src="/next.svg"
