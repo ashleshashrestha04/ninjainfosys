@@ -11,10 +11,14 @@
     "test": "echo \"No tests specified. Add a test runner like Jest to enable tests.\" && exit 0"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.66.0",
+    "@carbon/react": "^1.90.0",
     "next": "15.5.2",
+    "next-intl": "^4.3.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

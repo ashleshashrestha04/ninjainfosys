@@ -1,0 +1,20 @@
+{
+  "greeting": "Hello!",
+  "welcome": "Welcome to the portal.",
+  "app": {
+    "title": "Grievance Portal"
+  },
+  "nav": {
+    "home": "Home",
+    "contact": "Contact Us",
+    "about": "About Us",
+    "login": "Login",
+    "signup": "Signup"
+  },
+  "lang": {
+    "toggle": "Language"
+  },
+  "theme": {
+    "toggle": "Toggle Theme"
+  }
+}
