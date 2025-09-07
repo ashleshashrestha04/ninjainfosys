@@ -9,12 +9,37 @@
     "contact": "Contact Us",
     "about": "About Us",
     "login": "Login",
-    "signup": "Signup"
+    "signup": "Signup",
+    "issueTicket": "Issue Ticket"
   },
   "lang": {
     "toggle": "Language"
   },
   "theme": {
     "toggle": "Toggle Theme"
+  },
+  "citizen": {
+    "form": {
+      "title": "Submit Ticket",
+      "fullName": "Full Name",
+      "phoneNumber": "Phone Number",
+      "ward": "Ward",
+      "category": "Category",
+      "description": "Description",
+      "submit": "Submit",
+      "selectWard": "Select a ward",
+      "selectCategory": "Select a category"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Please sign in to access your account",
+      "email": "Email Address",
+      "password": "Password",
+      "signIn": "Sign In",
+      "signingIn": "Signing In...",
+      "demoCredentials": "Use any valid email and password for demo"
+    }
   }
 }

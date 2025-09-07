@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from '../../components/theme-provider';
 import "./globals.css";
+import { AppHeader } from '@/components/header';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'ne' }];
@@ -23,6 +24,7 @@ export default async function RootLayout({ children, params }: { children: React
       <body>
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
+            <AppHeader />
               {children}
           </NextIntlClientProvider>
         </ThemeProvider>
