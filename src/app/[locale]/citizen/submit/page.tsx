@@ -137,11 +137,13 @@ const SubmitTicketPage = () => {
           
           // Add ticket to Zustand store
           addTicket({
-            fullName: formData.fullName,
-            phoneNumber: formData.phoneNumber,
-            ward: formData.ward,
-            category: formData.category,
+            title_en: `${formData.category} - ${formData.fullName}`,
+            name: formData.fullName,
+            phone: formData.phoneNumber,
+            category_id: formData.category,
+            ward_id: formData.ward,
             description: formData.description,
+            priority: 'Medium', // Default priority, could be made selectable
           });
           
           // Reset form

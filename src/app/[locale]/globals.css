@@ -1,3 +1,5 @@
+@import '@carbon/styles/css/styles.min.css';
+
 :root {
   --background: #f4f4f4; /* g10 */
   --foreground: #161616; /* g10 */
@@ -6,6 +8,87 @@
 [data-theme="g90"] {
   --background: #161616; /* g90 */
   --foreground: #f4f4f4; /* g90 */
+}
+
+/* Modal styling fixes */
+.cds--modal {
+  z-index: 9999 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.cds--modal-container {
+  background: white !important;
+  max-height: 90vh !important;
+  max-width: 90vw !important;
+  width: 800px !important;
+  overflow-y: auto !important;
+  position: relative !important;
+  border-radius: 0 !important;
+  box-shadow: 0 16px 70px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cds--modal-content {
+  padding: 1rem !important;
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+}
+
+.cds--modal-header {
+  background: #f4f4f4 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  padding: 1rem !important;
+}
+
+.cds--modal-close {
+  background: transparent !important;
+}
+
+.cds--modal-footer {
+  border-top: 1px solid #e0e0e0 !important;
+  padding: 1rem !important;
+}
+
+/* Modal overlay */
+.cds--modal::before {
+  content: '' !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: -1 !important;
+}
+
+/* Ensure modal appears above everything */
+body:has(.cds--modal) {
+  overflow: hidden !important;
+}
+
+/* Table styling improvements */
+.cds--data-table tbody tr:hover {
+  background-color: #f8f9fa !important;
+}
+
+.cds--data-table tbody tr {
+  cursor: pointer !important;
+}
+
+.cds--data-table th {
+  background-color: #f4f4f4 !important;
+  font-weight: 600 !important;
+}
+
+.cds--tag {
+  font-size: 0.75rem !important;
+  padding: 0.25rem 0.75rem !important;
 }
 
 @media (prefers-color-scheme: dark) {
